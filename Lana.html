@@ -9,237 +9,138 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
     (function() {
-        
-        emailjs.init("wszy-6fUU-lnoVTQb"); 
+        // تم تحديث الـ Public Key هنا
+        emailjs.init("33p9Wp7lr4yzqED-i"); 
     })();
   </script>
   <script src="/_sdk/element_sdk.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <style>
-    body {
-      box-sizing: border-box;
-    }
-    
+    body { box-sizing: border-box; }
     .font-dancing { font-family: 'Dancing Script', cursive; }
     .font-quicksand { font-family: 'Quicksand', sans-serif; }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-    
-    @keyframes flicker {
-      0%, 100% { opacity: 1; transform: scaleY(1); }
-      50% { opacity: 0.8; transform: scaleY(1.1); }
-    }
-    
-    @keyframes glow {
-      0%, 100% { filter: drop-shadow(0 0 8px #fbbf24) drop-shadow(0 0 15px #f59e0b); }
-      50% { filter: drop-shadow(0 0 15px #fbbf24) drop-shadow(0 0 25px #f59e0b); }
-    }
-    
-    .cake-container {
-      animation: float 3s ease-in-out infinite;
-    }
-    
-    .candle-flame {
-      animation: flicker 0.5s ease-in-out infinite;
-    }
-    
-    .cake-glow {
-      animation: glow 2s ease-in-out infinite;
-    }
-    
-    /* Firework particles */
-    @keyframes firework-burst {
-      0% { transform: translate(0, 0) scale(1); opacity: 1; }
-      100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
-    }
-    
-    @keyframes firework-trail {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(-60px); opacity: 0; }
-    }
-    
-    .firework-particle {
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      animation: firework-burst 1.5s ease-out infinite;
-    }
-    
-    .firework-trail {
-      position: absolute;
-      width: 3px;
-      height: 20px;
-      border-radius: 50%;
-      animation: firework-trail 0.8s ease-out infinite;
-    }
-    
-    @keyframes sparkle {
-      0%, 100% { opacity: 0; transform: scale(0); }
-      50% { opacity: 1; transform: scale(1); }
-    }
-    
-    .sparkle {
-      animation: sparkle 1.5s ease-in-out infinite;
-    }
-    
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .fade-in-up {
-      animation: fadeInUp 0.8s ease-out forwards;
-    }
-    
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      25% { transform: scale(1.1); }
-      50% { transform: scale(1); }
-      75% { transform: scale(1.1); }
-    }
-    
-    .heartbeat {
-      animation: heartbeat 1.5s ease-in-out infinite;
-    }
-    
-    @keyframes gradient-shift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    
-    .gradient-bg {
-      background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
-      background-size: 400% 400%;
-      animation: gradient-shift 15s ease infinite;
-    }
-    
-    .wish-input {
-      min-height: 60px;
-      resize: vertical;
-    }
-    
-    @keyframes star-twinkle {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 1; }
-    }
-    
-    .star {
-      animation: star-twinkle var(--duration) ease-in-out infinite;
-      animation-delay: var(--delay);
-    }
+    @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+    @keyframes flicker { 0%, 100% { opacity: 1; transform: scaleY(1); } 50% { opacity: 0.8; transform: scaleY(1.1); } }
+    @keyframes glow { 0%, 100% { filter: drop-shadow(0 0 8px #fbbf24) drop-shadow(0 0 15px #f59e0b); } 50% { filter: drop-shadow(0 0 15px #fbbf24) drop-shadow(0 0 25px #f59e0b); } }
+    .cake-container { animation: float 3s ease-in-out infinite; }
+    .candle-flame { animation: flicker 0.5s ease-in-out infinite; }
+    .cake-glow { animation: glow 2s ease-in-out infinite; }
+    @keyframes firework-burst { 0% { transform: translate(0, 0) scale(1); opacity: 1; } 100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; } }
+    @keyframes firework-trail { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(-60px); opacity: 0; } }
+    .firework-particle { position: absolute; width: 8px; height: 8px; border-radius: 50%; animation: firework-burst 1.5s ease-out infinite; }
+    .firework-trail { position: absolute; width: 3px; height: 20px; border-radius: 50%; animation: firework-trail 0.8s ease-out infinite; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+    @keyframes heartbeat { 0%, 100% { transform: scale(1); } 25% { transform: scale(1.1); } 50% { transform: scale(1); } 75% { transform: scale(1.1); } }
+    .heartbeat { animation: heartbeat 1.5s ease-in-out infinite; }
+    .gradient-bg { background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e); background-size: 400% 400%; animation: gradient-shift 15s ease infinite; }
+    @keyframes gradient-shift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+    .wish-input { min-height: 60px; resize: vertical; }
+    @keyframes star-twinkle { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+    .star { animation: star-twinkle var(--duration) ease-in-out infinite; animation-delay: var(--delay); }
   </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full font-quicksand">
-  <div id="app" class="gradient-bg h-full w-full overflow-auto relative"><div id="stars-container" class="absolute inset-0 overflow-hidden pointer-events-none"></div><div class="relative z-10 min-h-full flex flex-col items-center justify-center px-4 py-8"><h1 id="birthday-title" class="font-dancing text-5xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 mb-2 text-center fade-in-up" style="animation-delay: 0.2s;">Happy 22nd Birthday</h1>
-    <h2 id="name-display" class="font-dancing text-4xl md:text-6xl text-amber-300 mb-8 text-center fade-in-up" style="animation-delay: 0.4s;">Lana! 🎉</h2><div class="cake-container relative mb-8 fade-in-up" style="animation-delay: 0.6s;"><div id="fireworks-container" class="absolute -top-20 left-1/2 transform -translate-x-1/2 w-64 h-32 pointer-events-none"></div><svg class="cake-glow" width="280" height="280" viewbox="0 0 280 280"><ellipse cx="140" cy="260" rx="130" ry="15" fill="#e5e7eb" opacity="0.3" /> <rect x="40" y="180" width="200" height="70" rx="10" fill="#ec4899" /> <rect x="40" y="180" width="200" height="15" rx="5" fill="#f472b6" /> <circle cx="70" cy="215" r="8" fill="#fbbf24" /> <circle cx="110" cy="215" r="8" fill="#a78bfa" /> <circle cx="150" cy="215" r="8" fill="#34d399" /> <circle cx="190" cy="215" r="8" fill="#60a5fa" /> <circle cx="230" cy="215" r="8" fill="#fbbf24" /> <rect x="60" y="120" width="160" height="60" rx="8" fill="#a78bfa" /> <rect x="60" y="120" width="160" height="12" rx="4" fill="#c4b5fd" /> <path d="M80 150 Q90 140 100 150 Q110 160 120 150" stroke="#fbbf24" stroke-width="3" fill="none" /> <path d="M130 150 Q140 140 150 150 Q160 160 170 150" stroke="#f472b6" stroke-width="3" fill="none" /> <path d="M180 150 Q190 140 200 150" stroke="#34d399" stroke-width="3" fill="none" /> <rect x="85" y="70" width="110" height="50" rx="6" fill="#34d399" /> <rect x="85" y="70" width="110" height="10" rx="3" fill="#6ee7b7" /> <text x="105" y="100" font-size="16">
-        💖
-       </text> <text x="135" y="100" font-size="16">
-        💜
-       </text> <text x="165" y="100" font-size="16">
-        💖
-       </text> <g id="candles">
-        <rect x="100" y="35" width="6" height="35" rx="2" fill="#60a5fa" />
-        <rect x="137" y="30" width="6" height="40" rx="2" fill="#f472b6" />
-        <rect x="174" y="35" width="6" height="35" rx="2" fill="#fbbf24" />
-       </g> <g id="flames">
-        <ellipse class="candle-flame" cx="103" cy="28" rx="5" ry="10" fill="#fbbf24" />
-        <ellipse class="candle-flame" cx="103" cy="26" rx="3" ry="6" fill="#fff7ed" />
-        <ellipse class="candle-flame" cx="140" cy="23" rx="6" ry="12" fill="#fbbf24" style="animation-delay: 0.2s;" />
-        <ellipse class="candle-flame" cx="140" cy="21" rx="4" ry="7" fill="#fff7ed" style="animation-delay: 0.2s;" />
-        <ellipse class="candle-flame" cx="177" cy="28" rx="5" ry="10" fill="#fbbf24" style="animation-delay: 0.4s;" />
-        <ellipse class="candle-flame" cx="177" cy="26" rx="3" ry="6" fill="#fff7ed" style="animation-delay: 0.4s;" />
-       </g> <text x="140" y="200" text-anchor="middle" font-size="28" font-weight="bold" fill="#fff" font-family="'Dancing Script', cursive">
-        22
-       </text>
-      </svg>
-     </div><div id="wish-section" class="w-full max-w-md px-4 fade-in-up" style="animation-delay: 0.8s;">
-      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"><label class="block text-pink-200 text-lg mb-3 text-center font-semibold"> ✨تمني امنية❤️✨ </label> <textarea id="wish-input" class="wish-input w-full px-4 py-3 rounded-xl bg-white/20 border border-pink-300/30 text-white placeholder-pink-200/60 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent text-base" placeholder="هنا اكتبيها" rows="3"></textarea> <button id="wish-button" class="w-full mt-4 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-pink-500/50"> ❤️✅تمنيت الامنية </button>
-      </div>
-     </div><div id="wish-confirmation" class="hidden w-full max-w-lg px-4 text-center">
-      <div class="bg-gradient-to-br from-pink-500/20 to-purple-500/20 backdrop-blur-md rounded-2xl p-8 border border-pink-300/30">
-       <div class="text-6xl mb-4 heartbeat">
-        💝
-       </div>
-       <p id="confirmation-text" class="text-xl md:text-2xl text-pink-100 font-medium leading-relaxed">عسى الله أن يحقق كل ما يتمناه قبلك الطيب وروحك النقية ويجعلك من كل امنياتك واقعا ينسيج كل اذى شفتيه</p>
-      </div>
-     </div><div id="personal-message" class="hidden w-full max-w-2xl px-4 mt-8">
-      <div class="bg-gradient-to-br from-amber-500/10 to-pink-500/10 backdrop-blur-md rounded-2xl p-8 border border-amber-300/30">
-       <div class="text-4xl mb-4 text-center">
-        🌸
-       </div>
-       <p id="message-text" class="text-lg md:text-xl text-amber-100 leading-relaxed text-center">لانا، غيث الفرات وروح الشام ومنبع الطيب في سوريا <br><br>
-        كل عام وأنتي بألف خير وصحة وعافية، عسى الله أن يكتب لك في عامك الجديد هذا من الخيرات ما يجبر بخاطر روحك اللطيفة وعساه أن ييسر لك كل عسير ويضيئ لك دربك ويسهل لك دربا اخر للجنة
-        <br><br>
-لانا اللطيفة والحكيمة والطيبة الي كانت صدفة معرفتنا بها هي اجمل صدفة مرت علينا بالسنين الماضية والحمدلله لا زال نفعها حاضرا لليوم
-        <br><br>
-لانا من تحجي معاها تحس نفسك أحيانا ما جاي تحجي مع انسانة بهالقرن تحجي مع صحابية من كثرة الكلام الرزين والعقلية الرائعة التي تحملها هالانسانة! عندج تفكير ما شاء الله شكد رائع وواعي ولطيف ومرتب الله ينفعك بيه ويزيدك علم يارب
-        <br><br>
-سبحان الله احيانا الإنسان ما يشوف الاشياء الحلوة بنفسه الا ييجي واحد ويكله عليهن وانتي يا لانا فيك كثييييييير اشياء حلوة وكلك على بعضك تحفة فلا تغيرين بنفسك شي نعم طوريها للزمن وواكبي الزمن لكن بقي هالاشياء الجميلة الي عندج فهي الي تزيد هالارض جمالا - وبيني  وبينك اذا تزوجتي خلفي قد ما تقدرين بلكي هالمجتمع يتحسن من يكثر نسلكم فيه🤣😉😂❤️❤️❤️❤️ - 
-        <br><br>
-        اللطافة والإيمان والكرم والوفاء والمواهب والطموح هالاشياء الي بيج رائعات جداااا، تحضرني صورة حمزة الي شوفتيني اياها وهو ياكل الكيكة ومتونس بيها يمكن ما قلتلك هالكلام بس اكيد دامها من ايدك اكيد مليانة طيب قلب وحنان هالشي هو الي يونسه مو السكر الي قلتلك عليه هذا القصد الحقيقي بس لازم نكابر شوي😂😂❤️❤️❤️❤️
-        <br><br>
-وصراحة شغلة حيل حلوة لمن تركزين على التفاصيل بدقة هالشي حيل حلو ويعجبني خاصة من ركزتي على تفاصيل التصميم كونك مصممة تحفة اكيد رح يكون اذا التصميم بيه فرصة انو يكون أحلى بس هي صديقتك على امكانياتها عملته فالحلو بهالصفة انو تخليك واعية على حولك وحول غيرك من الأمور بس لما تكثر تضرك فاخذي بالك على لانا مالتنا🔪👍
-        <br><br>
-      يقول الله تعالى في كتابه الكريم 
-{ وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً قَالُوا أَتَجْعَلُ فِيهَا مَنْ يُفْسِدُ فِيهَا وَيَسْفِكُ الدِّمَاءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ قَالَ إِنِّي أَعْلَمُ مَا لَا تَعْلَمُونَ }
-[سُورَةُ البَقَرَةِ: ٣٠] 
+  <div id="app" class="gradient-bg h-full w-full overflow-auto relative">
+    <div id="stars-container" class="absolute inset-0 overflow-hidden pointer-events-none"></div>
+    <div class="relative z-10 min-h-full flex flex-col items-center justify-center px-4 py-8">
+      <h1 id="birthday-title" class="font-dancing text-5xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 mb-2 text-center fade-in-up" style="animation-delay: 0.2s;">Happy 22nd Birthday</h1>
+      <h2 id="name-display" class="font-dancing text-4xl md:text-6xl text-amber-300 mb-8 text-center fade-in-up" style="animation-delay: 0.4s;">Lana! 🎉</h2>
 
-        <br><br>
-        خلقنا الله خلفاءه في الارض كي نعمرها وننشر الطيب والتسامح والخير فيها ومن بعد أن يقضي الله اجلنا نترك نحن هذه المستعمرة وننتقل الى موطننا الاصلي تاركين خلفنا ذخرا من الأعمال الصالحة والذرية الصالحة التي تعمل الخير ولنا في تربيتهم اجر عظيم ولكل عمل يعملونه لنا اجر فيه وكما قلتي في المنشور المؤمن كالغيث أينما وقع نفع ووقعت انا على هذا الموقع وعساه أن يكون مفرح لك ويرسم البسمة على وجهك ولو بشيء قليل رضيت به هو هذا هدفي منه❤️✨️  وللامانة طلبت منك الايميل عشان امنيتك رح تصلك على الإيميل برسالة ❤️✨️
-        <br><br>
-عسى انو بعدين من تتذركيني اني او بعد سنين تفتحين الايميل تلقينه موجود عندج بالمفضلة او بين هالرسائل مدفون ومن تشوفينه تتذكرينها اذا كانت ذكرى حلوة عليج وتسعدج حتى ولو كنا كل من ملتهي بحياته وتذكريني بدعوة صادقة تجلي عني كرب من كروب الدنيا ✨️🌸❤️
-        
+      <div class="cake-container relative mb-8 fade-in-up" style="animation-delay: 0.6s;">
+        <div id="fireworks-container" class="absolute -top-20 left-1/2 transform -translate-x-1/2 w-64 h-32 pointer-events-none"></div>
+        <svg class="cake-glow" width="280" height="280" viewbox="0 0 280 280">
+          <ellipse cx="140" cy="260" rx="130" ry="15" fill="#e5e7eb" opacity="0.3" /> 
+          <rect x="40" y="180" width="200" height="70" rx="10" fill="#ec4899" /> 
+          <rect x="40" y="180" width="200" height="15" rx="5" fill="#f472b6" /> 
+          <circle cx="70" cy="215" r="8" fill="#fbbf24" /> 
+          <circle cx="110" cy="215" r="8" fill="#a78bfa" /> 
+          <circle cx="150" cy="215" r="8" fill="#34d399" /> 
+          <circle cx="190" cy="215" r="8" fill="#60a5fa" /> 
+          <circle cx="230" cy="215" r="8" fill="#fbbf24" /> 
+          <rect x="60" y="120" width="160" height="60" rx="8" fill="#a78bfa" /> 
+          <rect x="60" y="120" width="160" height="12" rx="4" fill="#c4b5fd" /> 
+          <path d="M80 150 Q90 140 100 150 Q110 160 120 150" stroke="#fbbf24" stroke-width="3" fill="none" /> 
+          <path d="M130 150 Q140 140 150 150 Q160 160 170 150" stroke="#f472b6" stroke-width="3" fill="none" /> 
+          <path d="M180 150 Q190 140 200 150" stroke="#34d399" stroke-width="3" fill="none" /> 
+          <rect x="85" y="70" width="110" height="50" rx="6" fill="#34d399" /> 
+          <rect x="85" y="70" width="110" height="10" rx="3" fill="#6ee7b7" /> 
+          <text x="105" y="100" font-size="16">💖</text> <text x="135" y="100" font-size="16">💜</text> <text x="165" y="100" font-size="16">💖</text> 
+          <g id="candles">
+            <rect x="100" y="35" width="6" height="35" rx="2" fill="#60a5fa" />
+            <rect x="137" y="30" width="6" height="40" rx="2" fill="#f472b6" />
+            <rect x="174" y="35" width="6" height="35" rx="2" fill="#fbbf24" />
+          </g> 
+          <g id="flames">
+            <ellipse class="candle-flame" cx="103" cy="28" rx="5" ry="10" fill="#fbbf24" />
+            <ellipse class="candle-flame" cx="103" cy="26" rx="3" ry="6" fill="#fff7ed" />
+            <ellipse class="candle-flame" cx="140" cy="23" rx="6" ry="12" fill="#fbbf24" style="animation-delay: 0.2s;" />
+            <ellipse class="candle-flame" cx="140" cy="21" rx="4" ry="7" fill="#fff7ed" style="animation-delay: 0.2s;" />
+            <ellipse class="candle-flame" cx="177" cy="28" rx="5" ry="10" fill="#fbbf24" style="animation-delay: 0.4s;" />
+            <ellipse class="candle-flame" cx="177" cy="26" rx="3" ry="6" fill="#fff7ed" style="animation-delay: 0.4s;" />
+          </g> 
+          <text x="140" y="200" text-anchor="middle" font-size="28" font-weight="bold" fill="#fff" font-family="'Dancing Script', cursive">22</text>
+        </svg>
+      </div>
+
+      <div id="wish-section" class="w-full max-w-md px-4 fade-in-up" style="animation-delay: 0.8s;">
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+          <label class="block text-pink-200 text-lg mb-3 text-center font-semibold"> ✨تمني امنية❤️✨ </label> 
+          <textarea id="wish-input" class="wish-input w-full px-4 py-3 rounded-xl bg-white/20 border border-pink-300/30 text-white placeholder-pink-200/60 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent text-base" placeholder="هنا اكتبيها" rows="3"></textarea> 
+          <button id="wish-button" class="w-full mt-4 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-pink-500/50"> ❤️✅تمنيت الامنية </button>
+        </div>
+      </div>
+
+      <div id="wish-confirmation" class="hidden w-full max-w-lg px-4 text-center">
+        <div class="bg-gradient-to-br from-pink-500/20 to-purple-500/20 backdrop-blur-md rounded-2xl p-8 border border-pink-300/30">
+          <div class="text-6xl mb-4 heartbeat">💝</div>
+          <p id="confirmation-text" class="text-xl md:text-2xl text-pink-100 font-medium leading-relaxed mb-6">عسى الله أن يحقق كل ما يتمناه قبلك الطيب وروحك النقية ويجعلك من كل امنياتك واقعا ينسيج كل اذى شفتيه</p>
+          <button id="wish-again-button" class="px-6 py-2 bg-pink-500/40 hover:bg-pink-500/60 text-white rounded-lg transition-all text-sm border border-white/30">✨ تمني أمنية أخرى؟</button>
+        </div>
+      </div>
+
+      <div id="personal-message" class="hidden w-full max-w-2xl px-4 mt-8 mb-12">
+        <div class="bg-gradient-to-br from-amber-500/10 to-pink-500/10 backdrop-blur-md rounded-2xl p-8 border border-amber-300/30">
+          <div class="text-4xl mb-4 text-center">🌸</div>
+          <p id="message-text" class="text-lg md:text-xl text-amber-100 leading-relaxed text-center">لانا، غيث الفرات وروح الشام ومنبع الطيب في سوريا <br><br>
+كل عام وأنتي بألف خير وصحة وعافية، عسى الله أن يكتب لك في عامك الجديد هذا من الخيرات ما يجبر بخاطر روحك اللطيفة وعساه أن ييسر لك كل عسير ويضيئ لك دربك ويسهل لك دربا اخر للجنة
+<br><br>
+لانا اللطيفة والحكيمة والطيبة الي كانت صدفة معرفتنا بها هي اجمل صدفة مرت علينا بالسنين الماضية والحمدلله لا زال نفعها حاضرا لليوم
+<br><br>
+لانا من تحجي معاها تحس نفسك أحيانا ما جاي تحجي مع انسانة بهالقرن تحجي مع صحابية من كثرة الكلام الرزين والعقلية الرائعة التي تحملها هالانسانة! عندج تفكير ما شاء الله شكد رائع وواعي ولطيف ومرتب الله ينفعك بيه ويزيدك علم يارب
+<br><br>
+سبحان الله احيانا الإنسان ما يشوف الاشياء الحلوة بنفسه الا ييجي واحد ويكله عليهن وانتي يا لانا فيك كثييييييير اشياء حلوة وكلك على بعضك تحفة فلا تغيرين بنفسك شي نعم طوريها للزمن وواكبي الزمن لكن بقي هالاشياء الجميلة الي عندج فهي الي تزيد هالارض جمالا - وبيني وبينك اذا تزوجتي خلفي قد ما تقدرين بلكي هالمجتمع يتحسن من يكثر نسلكم فيه🤣😉😂❤️❤️❤️❤️ - 
+<br><br>
+اللطافة والإيمان والكرم والوفاء والمواهب والطموح هالاشياء الي بيج رائعات جداااا، تحضرني صورة حمزة الي شوفتيني اياها وهو ياكل الكيكة ومتونس بيها يمكن ما قلتلك هالكلام بس اكيد دامها من ايدك اكيد مليانة طيب قلب وحنان هالشي هو الي يونسه مو السكر الي قلتلك عليه هذا القصد الحقيقي بس لازم نكابر شوي😂😂❤️❤️❤️❤️
+<br><br>
+وصراحة شغلة حيل حلوة لمن تركزين على التفاصيل بدقة هالشي حيل حلو ويعجبني خاصة من ركزتي على تفاصيل التصميم كونك مصممة تحفة اكيد رح يكون اذا التصميم بيه فرصة انو يكون أحلى بس هي صديقتك على امكانياتها عملته فالحلو بهالصفة انو تخليك واعية على حولك وحول غيرك من الأمور بس لما تكثر تضرك فاخذي بالك على لانا مالتنا🔪👍
+<br><br>
+يقول الله تعالى في كتابه الكريم 
+{ وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً قَالُوا أَتَجْعَلُ فِيهَا مَنْ يُفْسِدُ فِيهَا وَيَسْفِكُ الدِّمَاءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ قَالَ إِنِّي أَعْلَمُ مَا لَا تَعْلَمُونَ } 
+[سُورَةُ البَقَرَةِ: ٣٠] 
+<br><br>
+خلقنا الله خلفاءه في الارض كي نعمرها وننشر الطيب والتسامح والخير فيها ومن بعد أن يقضي الله اجلنا نترك نحن هذه المستعمرة وننتقل الى موطننا الاصلي تاركين خلفنا ذخرا من الأعمال الصالحة والذرية الصالحة التي تعمل الخير ولنا في تربيتهم اجر عظيم ولكل عمل يعملونه لنا اجر فيه وكما قلتي في المنشور المؤمن كالغيث أينما وقع نفع ووقعت انا على هذا الموقع وعساه أن يكون مفرح لك ويرسم البسمة على وجهك ولو بشيء قليل رضيت به هو هذا هدفي منه❤️✨️ وللامانة طلبت منك الايميل عشان امنيتك رح تصلك على الإيميل برسالة ❤️✨️
+<br><br>
+عسى انو بعدين من تتذكريني اني او بعد سنين تفتحين الايميل تلقينه موجود عندج بالمفضلة او بين هالرسائل مدفون ومن تشوفينه تتذكرينها اذا كانت ذكرى حلوة عليج وتسعدج حتى ولو كنا كل من ملتهي بحياته وتذكريني بدعوة صادقة تجلي عني كرب من كروب الدنيا ✨️🌸❤️
 <br><br>
 وعساها تبقى دائما ذكرى تذكرك انو عندك اخ وصديق معاك ويعينك ويسندك بالخفاء والعلن وأنك مش لوحدك باي درب وخطوة انا ودعائي معك فشدي حيلج واصلي لاعلى مرتبة اني اتمناها الج وأنتي تتمنينها لنفسج وربنا يريدها الج❤️🌸✨️ والمسافاة عمرها ما كانت سبب حتى الواحد ما يقدر يعين أهله وأحبابه على الدنيا المهم صدق النية والقلوب تخاطب بعضها وهي تفهم بعضها✨️❤️
 <br><br>
 الأيام صعبة والدنيا قاسية بس الي يخففها علينا وجود احبتنا معانا وجودهم النفسي والمعنوي🌸❤️ وإن شاء الله لما تحتاجيني ببرقية اجيك وأعينك فلا تشيلين هم، متى ما تتعبين تعي فرغي تعبك وارتاحي وانطلقي كملي رحلتك ونكمل إن شاء الله هالرحلة ونصل لاحلامنا ونحن فخورين ببعضنا انو ما استسلمنا✨️🔥 
- <br><br>
-      <span class="text-pink-300 font-semibold">صديقك المكرود🤣❤️</span></p>
+<br><br>
+<span class="text-pink-300 font-semibold">صديقك المكرود🤣❤️</span></p>
+        </div>
       </div>
-     </div><div class="mt-8 text-pink-200/60 text-sm text-center fade-in-up" style="animation-delay: 1s;">
+      <div class="mt-8 text-pink-200/60 text-sm text-center fade-in-up" style="animation-delay: 1s;">
         ذكرى الموقع بتاريخ 2026-1-25 الساعة 5:25 مساءا معرف مغربا 🤣 ومفكر ارسله الها بيوم ميلادها بالبداية ان شاء الله
-     </div>
+      </div>
     </div>
-   </div>
-   <script>
-    // Default configuration
-    const defaultConfig = {
-      birthday_name: 'Lana',
-      personal_message: `My dearest Lana,
- 
- From thousands of miles away, your Iraqi friend is thinking of you on this special day. You've touched my life in ways words can barely express. Every kindness you've shown me, every moment of support, every smile you've shared — I carry them all in my heart.
- 
- Syria and Iraq may be separated by borders, but our friendship knows no distance. You are a beautiful soul, and the world is brighter because you're in it.
- 
- Thank you for being YOU. Thank you for every good thing you've done for me. I am forever grateful for our friendship.
- 
- Here's to 22 years of you being amazing, and to many more years of joy, success, and all the happiness you deserve!
- 
- With all my love and warmest wishes,
- Your friend from Iraq 🇮🇶❤️🇸🇾`,
-      wish_confirmation: 'I hope every wish your pure soul wishes will become true!',
-      background_color: '#1a1a2e',
-      accent_color: '#ec4899',
-      text_color: '#fce7f3',
-      button_color: '#a855f7',
-      highlight_color: '#fbbf24'
-    };
-    
-    let config = { ...defaultConfig };
+  </div>
+
+  <script>
     let fireworksActive = true;
     let fireworkIntervals = [];
-    
-    // Generate stars
     function generateStars() {
       const container = document.getElementById('stars-container');
-      container.innerHTML = '';
       for (let i = 0; i < 50; i++) {
         const star = document.createElement('div');
         star.className = 'star absolute rounded-full bg-white';
@@ -252,207 +153,86 @@
         container.appendChild(star);
       }
     }
-    
-    // Generate firework particles
     function createFirework() {
       if (!fireworksActive) return;
-      
       const container = document.getElementById('fireworks-container');
-      const colors = ['#ec4899', '#a855f7', '#fbbf24', '#34d399', '#60a5fa', '#f472b6'];
+      const colors = ['#ec4899', '#a855f7', '#fbbf24', '#34d399', '#60a5fa'];
       const centerX = 128;
-      const baseY = 100;
-      
-      // Create trail
       const trail = document.createElement('div');
       trail.className = 'firework-trail';
       trail.style.background = colors[Math.floor(Math.random() * colors.length)];
       trail.style.left = (centerX + (Math.random() - 0.5) * 60) + 'px';
-      trail.style.top = baseY + 'px';
+      trail.style.top = '100px';
       container.appendChild(trail);
-      
       setTimeout(() => {
         trail.remove();
-        
-        // Create burst
         const burstX = parseFloat(trail.style.left);
-        const burstY = baseY - 60;
-        
         for (let i = 0; i < 12; i++) {
           const particle = document.createElement('div');
           particle.className = 'firework-particle';
           particle.style.background = colors[Math.floor(Math.random() * colors.length)];
           particle.style.left = burstX + 'px';
-          particle.style.top = burstY + 'px';
-          
+          particle.style.top = '40px';
           const angle = (i / 12) * Math.PI * 2;
           const distance = 30 + Math.random() * 30;
           particle.style.setProperty('--tx', Math.cos(angle) * distance + 'px');
           particle.style.setProperty('--ty', Math.sin(angle) * distance + 'px');
-          
           container.appendChild(particle);
-          
           setTimeout(() => particle.remove(), 1500);
         }
       }, 800);
     }
-    
-    // Start fireworks
     function startFireworks() {
+      if (fireworkIntervals.length > 0) return;
       fireworksActive = true;
       fireworkIntervals.push(setInterval(createFirework, 600));
       fireworkIntervals.push(setInterval(createFirework, 800));
-      fireworkIntervals.push(setInterval(createFirework, 1000));
     }
-    
-    // Stop fireworks
     function stopFireworks() {
       fireworksActive = false;
-      fireworkIntervals.forEach(interval => clearInterval(interval));
+      fireworkIntervals.forEach(clearInterval);
       fireworkIntervals = [];
-      const container = document.getElementById('fireworks-container');
-      container.innerHTML = '';
     }
-    
-    // Handle wish submission
     function handleWishSubmit() {
       const wishInput = document.getElementById('wish-input');
       const wish = wishInput.value.trim();
-      
       if (!wish) {
         wishInput.style.borderColor = '#f87171';
-        wishInput.placeholder = 'Please write your wish first... 💫';
-        setTimeout(() => {
-          wishInput.style.borderColor = '';
-          wishInput.placeholder = 'Type your heartfelt wish for Lana...';
-        }, 2000);
+        setTimeout(() => wishInput.style.borderColor = '', 2000);
         return;
       }
-      
-      // Stop fireworks
       stopFireworks();
-      
-      // Hide wish section
       const wishSection = document.getElementById('wish-section');
       wishSection.style.opacity = '0';
-      wishSection.style.transform = 'translateY(-20px)';
-      wishSection.style.transition = 'all 0.5s ease-out';
-      
       setTimeout(() => {
         wishSection.classList.add('hidden');
-        
-        // Show confirmation
-        const confirmation = document.getElementById('wish-confirmation');
-        confirmation.classList.remove('hidden');
-        confirmation.classList.add('fade-in-up');
-        
-        // Show personal message after delay
+        document.getElementById('wish-confirmation').classList.remove('hidden');
+        document.getElementById('wish-confirmation').classList.add('fade-in-up');
         setTimeout(() => {
-          const personalMessage = document.getElementById('personal-message');
-          personalMessage.classList.remove('hidden');
-          personalMessage.classList.add('fade-in-up');
-        }, 2000);
+          document.getElementById('personal-message').classList.remove('hidden');
+          document.getElementById('personal-message').classList.add('fade-in-up');
+        }, 1000);
       }, 500);
-      
-      // 2. THIS IS THE NEW EMAIL SENDING LOGIC
-      // Send the email via EmailJS
-      const templateParams = {
-          message: wish
-      };
-
-      // REPLACE WITH YOUR SERVICE ID and TEMPLATE ID
-      emailjs.send('service_8eongx4', 'template_wxepn9y', templateParams)
-        .then(function(response) {
-           console.log('SUCCESS!', response.status, response.text);
-        }, function(error) {
-           console.log('FAILED...', error);
-           // Optional: You could alert her if it failed, but let's keep the magic alive even if it fails silently in background.
-        });
+      emailjs.send('service_8eongx4', 'template_wxepn9y', { message: wish })
+        .then(() => console.log('SUCCESS!'))
+        .catch((err) => console.log('FAILED...', err));
     }
-    
-    // Update UI based on config
-    async function onConfigChange(newConfig) {
-      config = { ...defaultConfig, ...newConfig };
-      
-      // Update name display
-      const nameDisplay = document.getElementById('name-display');
-      nameDisplay.textContent = config.birthday_name + '! 🎉';
-      
-      // Update confirmation text
-      const confirmationText = document.getElementById('confirmation-text');
-      confirmationText.textContent = config.wish_confirmation;
-      
-      // Update personal message
-      const messageText = document.getElementById('message-text');
-      messageText.innerHTML = config.personal_message.replace(/\n/g, '<br>');
+    function resetForNewWish() {
+      document.getElementById('wish-input').value = '';
+      document.getElementById('wish-confirmation').classList.add('hidden');
+      document.getElementById('personal-message').classList.add('hidden');
+      const wishSection = document.getElementById('wish-section');
+      wishSection.classList.remove('hidden');
+      wishSection.style.opacity = '1';
+      startFireworks();
     }
-    
-    // Map to capabilities
-    function mapToCapabilities(config) {
-      return {
-        recolorables: [
-          {
-            get: () => config.background_color || defaultConfig.background_color,
-            set: (value) => { config.background_color = value; window.elementSdk.setConfig({ background_color: value }); }
-          },
-          {
-            get: () => config.accent_color || defaultConfig.accent_color,
-            set: (value) => { config.accent_color = value; window.elementSdk.setConfig({ accent_color: value }); }
-          },
-          {
-            get: () => config.text_color || defaultConfig.text_color,
-            set: (value) => { config.text_color = value; window.elementSdk.setConfig({ text_color: value }); }
-          },
-          {
-            get: () => config.button_color || defaultConfig.button_color,
-            set: (value) => { config.button_color = value; window.elementSdk.setConfig({ button_color: value }); }
-          },
-          {
-            get: () => config.highlight_color || defaultConfig.highlight_color,
-            set: (value) => { config.highlight_color = value; window.elementSdk.setConfig({ highlight_color: value }); }
-          }
-        ],
-        borderables: [],
-        fontEditable: undefined,
-        fontSizeable: undefined
-      };
-    }
-    
-    // Map to edit panel values
-    function mapToEditPanelValues(config) {
-      return new Map([
-        ['birthday_name', config.birthday_name || defaultConfig.birthday_name],
-        ['personal_message', config.personal_message || defaultConfig.personal_message],
-        ['wish_confirmation', config.wish_confirmation || defaultConfig.wish_confirmation]
-      ]);
-    }
-    
-    // Initialize
     function init() {
       generateStars();
       startFireworks();
-      
-      // Set up event listeners
       document.getElementById('wish-button').addEventListener('click', handleWishSubmit);
-      document.getElementById('wish-input').addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' && !e.shiftKey) {
-          e.preventDefault();
-          handleWishSubmit();
-        }
-      });
-      
-      // Initialize SDK
-      if (window.elementSdk) {
-        window.elementSdk.init({
-          defaultConfig,
-          onConfigChange,
-          mapToCapabilities,
-          mapToEditPanelValues
-        });
-      }
+      document.getElementById('wish-again-button').addEventListener('click', resetForNewWish);
     }
-    
     init();
-   </script>
+  </script>
  </body>
 </html>
-
